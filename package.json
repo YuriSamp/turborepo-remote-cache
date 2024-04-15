@@ -1,0 +1,55 @@
+{
+  "name": "turborepo-remote-cache",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx --watch src/index.ts",
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "tsup": {
+    "clean": true,
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "esm"
+    ],
+    "minify": false,
+    "target": "esnext",
+    "outDir": "dist"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-isaacscript": "^3.12.2",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.5.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/one-line-logger": "^1.3.0",
+    "fastify": "^4.26.2"
+  }
+}
