@@ -6,6 +6,10 @@ export const authMiddleware = (
 ) => {
   const { authorization } = request.headers;
 
+  if (request.url.match("/health")) {
+    return;
+  }
+
   if (!authorization) {
     reply.status(401).send({ error: "authorization header não encontrado" });
   }
