@@ -1,6 +1,9 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 
-const makeHealthCheck = (_request: FastifyRequest, reply: FastifyReply) => {
+const makeHealthCheck = async (
+  _request: FastifyRequest,
+  reply: FastifyReply
+) => {
   const responseBody = {
     status: "OK",
   };
